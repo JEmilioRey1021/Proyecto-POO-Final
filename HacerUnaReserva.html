@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reservaciones POO</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="./js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <style>
+        .precio {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="m-2">
+                <img src="Imagenes/trivago-logo-1.png" alt="logo trivago" width="150px">
+            </div>
+            <div class="dropdown">
+                <a href="/index.html" class="btn btn-primary">Home</a>
+                <a href="/RegistrarHotel.html" class="btn btn-primary">Registrar Hotel</a>
+
+            </div>
+            <h1>Crear Reservación <span id="NombreHotelSpan"></span></h1>
+        </header>
+    </div>
+    <div class="container">
+        <h1>carrito</h1>
+        <hr>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Habitación</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Acción</th>
+                    <th scope="col">Total</th>
+                    <th scope="col"><button id="checkout" class="btn btn-success">Check out</button></th>
+                </tr>
+            </thead>
+            <tbody id="items"></tbody>
+            <tfoot>
+                <tr id="footer">
+                    <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="row" id="cards"></div>
+    </div>
+    <template id="template-card">
+        <div class="col-12 mb-2 col-md-4">
+            <div class="card">
+                <img src="#" alt="" class="card-img-top">
+                <div class="card-body">
+                    <h5>Titulo</h5>
+                    <p>Descripcion</p>
+                    <div><span>USD: </span><span class="precio">precio</span></div>
+                    <button class="btn btn-dark">Reservar</button>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="template-carrito">
+        <tr>
+            <td class="habitacion">Sencilla</td>
+            <td class="cantidad">1</td>
+            <td>
+                <button class="btn btn-info btn-sm">
+                    +
+                </button>
+                <button class="btn btn-danger btn-sm">
+                    -
+                </button>
+            </td>
+            <td>USD <span class="total">500</span></td>
+        </tr>
+    </template>
+    <template id="template-footer">
+        <th scope="row">Total Habitación</th>
+        <td class="CantidadTotalCarrito" >10</td>
+        <td>
+            <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                vaciar todo
+            </button>
+        </td>
+        <td class="font-weight-bold">USD <span class="MontoTotalCarrito">5000</span></td>
+    </template>
+    <script src="HacerUnaReserva.html.js">
+    </script>
+</body>
+
+</html>

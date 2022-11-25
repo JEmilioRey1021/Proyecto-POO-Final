@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>Reservaciones POO</title>
+        <link href="./css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="./js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="m-2">
+                    <img src="Imagenes/trivago-logo-1.png" alt="logo trivago" width="150px">
+                </div>
+                <div class="dropdown">
+                    <a href="/index.html" class="btn btn-primary">Home</a>
+                </div>
+                <h1>Check Out. Datos de facturacion. </h1>
+            </header>
+            <div class="mb-3">
+                <label for="reservaNombre" class="form-label">Nombre completo de la persona que reserva: </label>
+                <input type="text" class="form-control" id="reservaNombre" aria-describedby="reservaNombrehelp"/>
+                <div id="reservaNombrehelp" class="form-text">Ingrese el nombre de la persona que hace la reserva. </div>
+            </div>
+            <div class="mb-3">
+                <label for="reservaNombreFactura" class="form-label">Factura a nombre de: </label>
+                <input type="text" class="form-control" id="reservaNombreFactura" aria-describedby="reservaNombreFacturahelp"/>
+                <div id="reservaNombreFacturahelp" class="form-text">Ingrese el nombre de la persona o empresa a facturar. </div>
+            </div>
+            <div class="mb-3">
+                <label for="reservaNit" class="form-label">Nit: </label>
+                <input type="text" class="form-control" id="reservaNit" aria-describedby="reservaNithelp"/>
+                <div id="reservaNithelp" class="form-text">Ingrese el nit a facturar. Ingrese CF si desea consumidor final.</div>
+            </div>
+            <div class="mb-3">
+                <label for="reservaDireccion" class="form-label">Direccion fiscal: </label>
+                <input type="text" class="form-control" id="reservaDireccion" aria-describedby="reservaDireccionhelp"/>
+                <div id="reservaDireccionhelp" class="form-text">Ingrese la direccion registrada para su factura.  </div>
+            </div>
+            <div class="mb-3">
+                <label for="reservaCorreo" class="form-label">Correo electronico: </label>
+                <input type="email" class="form-control" id="reservaCorreo" aria-describedby="reservaCorreohelp"/>
+                <div id="reservaCorreohelp" class="form-text">Ingrese el correo para confirmar su orden:  </div>
+            </div>
+            <div class="mb-3">
+                <label for="reservaTelefono" class="form-label">Numero de telefono:  </label>
+                <input type="number" class="form-control" id="reservaTelefono" aria-describedby="reservaTelefonohelp"/>
+                <div id="reservaTelefonohelp" class="form-text">Ingrese el numero de telefono para confirmar su orden:  </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary" id="btn-guardar">Guardar</button>
+                </div>
+                <div class="col-md-2">
+                    <a href="/index.html" class="btn btn-secondary">Retornar</a>
+                </div>
+            </div>
+        <script src="CheckOut.html.js"></script>
+        </div>
+    </body>
+</html>

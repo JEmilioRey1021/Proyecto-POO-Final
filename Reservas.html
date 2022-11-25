@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reservaciones POO</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="./js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <style>
+        .precio {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="m-2">
+                <img src="Imagenes/trivago-logo-1.png" alt="logo trivago" width="150px">
+            </div>
+            <div class="dropdown">
+                <a href="/index.html" class="btn btn-primary">Home</a>
+            </div>
+            <h1>Reservas: <span id="NombreHotelSpan"></span></h1>
+        </header>
+    </div>
+    <div class="container">
+        <div class="card">
+            <img src="#" alt="" class="card-img-top">
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="reservaNombre" class="form-label">Nombre completo de la persona que reserva: </label>
+                    <label class="form-control" id="reservaNombre"></label>
+                </div>
+                <div class="mb-3">
+                    <label for="reservaNombreFactura" class="form-label">Factura a nombre de: </label>
+                    <label class="form-control" id="reservaNombreFactura"></label>
+                </div>
+                <div class="mb-3">
+                    <label for="reservaNit" class="form-label">Nit: </label>
+                    <label class="form-control" id="reservaNit"></label>
+                </div>
+                <div class="mb-3">
+                    <label for="reservaDireccion" class="form-label">Direccion fiscal: </label>
+                    <label class="form-control" id="reservaDireccion"></label>
+                </div>
+                <div class="mb-3">
+                    <label for="reservaCorreo" class="form-label">Correo electronico: </label>
+                    <label class="form-control" id="reservaCorreo"></label>
+                </div>
+                <div class="mb-3">
+                    <label for="reservaTelefono" class="form-label">Numero de telefono:  </label>
+                    <label class="form-control" id="reservaTelefono"></label>
+                </div>
+            </div>
+        </div>
+        
+        <h1>Habitaciones reservadas</h1>
+        <hr>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Habitación</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody id="items"></tbody>
+            <tfoot>
+                <tr id="footer">
+                    <th scope="row" colspan="5">Aun no hay reservas.</th>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="row" id="cards"></div>
+    </div>
+    
+    <template id="template-carrito">
+        <tr>
+            <td class="habitacion">Sencilla</td>
+            <td class="cantidad">1</td>
+            <td>USD <span class="total">500</span></td>
+        </tr>
+    </template>
+    <template id="template-footer">
+        <th scope="row">Total Habitación</th>
+        <td class="CantidadTotalCarrito" >10</td>
+        <td class="font-weight-bold">USD <span class="MontoTotalCarrito">5000</span></td>
+    </template>
+    <script src="Reservas.html.js">
+    </script>
+</body>
+
+</html>
